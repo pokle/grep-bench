@@ -7,8 +7,9 @@
 (ns bench.core)
 (use 'clojure.java.io)
 
-(defn grep [term file]
+(defn -main [term file]
   (with-open [rdr (reader file)]
     (doseq [line (line-seq rdr)]
       (if (. line startsWith term) (println line))
     )))
+
