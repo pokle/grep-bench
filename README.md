@@ -11,3 +11,6 @@ Disk IO wasn't that amazing back then. You could use a slow language, and still 
 
 Then something changed. There are SSDs everywhere. All of a sudden I'm finding that my processing scripts are CPU bound, and the SSDs are being hardly used to their full bandwidth. There's an opportunity here - to speed up processing.
 
+Source of data
+==============
+http://haselgrove.id.au/wikipedia.htm
