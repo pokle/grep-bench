@@ -11,3 +11,8 @@ bin/cgrep: bin c/cgrep.c
 
 bin/cppgrep: bin cpp/cppgrep.cc
 	c++ cpp/cppgrep.cc -o bin/cppgrep
+
+data/haystack:
+	./benchmark/generate-test-data.sh
+
+data: data/haystack
