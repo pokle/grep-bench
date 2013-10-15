@@ -1,7 +1,10 @@
 ;
 ; This manages 4mb/sec 100%cpu on my SSD Mac Mini :-(
 ;
-; Example usage: lein run -m bench.core/grep root /etc/passwd
+; Examples: 
+;
+;   lein run -m bench.core/-main root /etc/passwd
+;   lein run root /etc/passwd
 ;
 
 (ns bench.core)
