@@ -28,3 +28,4 @@ function make_haystack() {
 
 make_hay
 make_haystack
+rm -f data/hay

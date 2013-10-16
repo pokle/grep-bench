@@ -25,3 +25,40 @@ Results
 - C++: 30 seconds, 277 MB/sec
 - Clojure: 302 seconds, 27 MB/sec
 
+Contributing
+============
+
+Before you can run a benchmark, or write your own, you'll need some data.
+
+	$ make data
+
+This creates a large file called data/haystack. It contains one needle per gigabyte. Here's how to run the C version of the benchmark:
+
+	$ make
+	...
+	$ time ./bin/cgrep needle data/haystack
+	A very fine needle.
+	A very fine needle.
+	A very fine needle.
+	A very fine needle.
+	A very fine needle.
+	A very fine needle.
+	A very fine needle.
+	A very fine needle.
+	       20.63 real        18.64 user         1.98 sys
+
+Running your programs through this file tends to stress just input. It's a great way to understand input performance in isolation.
+
+On my 400MB/sec SSD Macbook Pro, I get:
+
+- C: 21 seconds, 398 MB/sec
+- C++: 30 seconds, 277 MB/sec
+- Clojure: 302 seconds, 27 MB/sec
+
+Lets try and generate output at the same time (albeit discarding it):
+
+	$ time ./bin/cgrep hay data/haystack > /dev/null
+			15.92 real        13.87 user         2.04 sys
+
+And something really weird happens! It gets faster!
+
