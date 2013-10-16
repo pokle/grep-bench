@@ -11,9 +11,10 @@ Here's some psuedo code:
 
 What's the point?
 =================
-Typically data processing often involves reading through text files such as CSV, XML, LDIF, MAIL, Apache log files, etc. Most of these are read line by line, and some translation and filter operations are applied. These tasks are not typically CPU bound. They tend to be IO bound.
+Typically data processing often involves reading through text files such as CSV, XML, LDIF, MAIL, Apache log files, etc. Most of these are read line by line, and some translation and filter operations are applied. These tasks are not typically CPU bound. 
 
-I've found through trial and error that not all languages are made the same when it comes to IO. And this benchmark is a way to illustrate this.
+These tasks tend to be IO bound. With fast SSDs and memory, IO is not a slouch any more in 2013. Your favourite language's IO subsystem is :-)
+
 
 Results
 =======
