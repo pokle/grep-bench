@@ -1,1 +1,1 @@
-lein run winston /Users/tushar/Downloads/titles-sorted.txt
+usage: lein run TERM FILE

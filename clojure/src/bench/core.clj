@@ -13,6 +13,6 @@
 (defn -main [term file]
   (with-open [rdr (reader file)]
     (doseq [line (line-seq rdr)]
-      (if (. line startsWith term) (println line))
+      (if (. line contains term) (println line))
     )))
 

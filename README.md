@@ -62,3 +62,26 @@ Lets try and generate output at the same time (albeit discarding it):
 
 And something really weird happens! It gets faster!
 
+
+Lets try Clojure
+================
+
+First lets see what the overhead is of just starting up the JVM:
+
+	$ cd clojure
+	$ time lein run root /etc/passwd > /dev/null
+	        2.76 real         4.61 user         0.27 sys
+
+And now lets search for the needles:
+
+	$ time lein run needle ../data/haystack 
+	A very fine needle.
+	...
+	      300.75 real       302.16 user         5.33 sys
+
+And how about the hay?
+
+	$ time lein run hay ../data/haystack > /dev/null 
+	      780.61 real       971.65 user       512.96 sys
+
+Whoa! Someone from the Clojure camp please help!
