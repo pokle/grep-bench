@@ -25,6 +25,9 @@ Results
 - C++: 30 seconds, 277 MB/sec
 - Clojure: 302 seconds, 27 MB/sec
 
+<img src="https://docs.google.com/spreadsheet/oimg?key=0An25T1C0eQDYdHBCTHJFbWJ5U2lZTC1STk5lMmwzbGc&oid=1&zx=oy1n0k4owqhy" />
+
+
 Contributing
 ============
 
@@ -50,6 +53,8 @@ This creates a large file called data/haystack. It contains one needle per gigab
 Running your programs through this file tends to stress just input. It's a great way to understand input performance in isolation.
 
 On my 400MB/sec SSD Macbook Pro, I get:
+
+
 
 - C: 21 seconds, 398 MB/sec
 - C++: 30 seconds, 277 MB/sec
